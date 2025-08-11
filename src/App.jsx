@@ -3,6 +3,8 @@ import Header from './components/Navbar/Navbar';
 import Hero from './components/Hero/HeroSeciton';
 import SkillSecion from './components/skill/SkillSecion';
 import Contact from './components/contact/Contact';
+import Footer from './components/Footer/Footer';
+import Education from './components/education/Education';
 
 const App = () => {
   return (
@@ -10,7 +12,9 @@ const App = () => {
       <Header />
       <Hero />
       <SkillSecion />
+      <Education />
       <Contact />
+      <Footer />
     </div>
   );
 };
