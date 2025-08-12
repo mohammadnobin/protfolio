@@ -1,3 +1,4 @@
+// this is router compnents
 import { createBrowserRouter } from "react-router";
 import RootLoayout from "../RootLoayout/RootLoayout";
 import App from "../App";
