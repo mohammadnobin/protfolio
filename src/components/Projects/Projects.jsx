@@ -152,8 +152,6 @@ const Projects = () => {
                 </button>
                 </Link>
               </div>
-
-              {/* Image with hover animation */}
               <div className="w-full 2xl:h-[440px] xl:h-[350px] lg:h-[200px] md:h-[440px] sm:h-[350px] h-[340px] overflow-hidden rounded-xl relative group">
                 <img
                   alt={item.projectName}
