@@ -6,6 +6,7 @@ import Contact from './components/contact/Contact';
 import Footer from './components/Footer/Footer';
 import Education from './components/education/Education';
 import About from './components/About/About';
+import Projects from './components/Projects/Projects';
 // import './assets/css/index.css'
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <About />
       <SkillSecion />
       <Education />
+      <Projects />
       <Contact />
       <Footer />
     </div>
