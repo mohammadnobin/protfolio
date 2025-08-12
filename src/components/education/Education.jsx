@@ -9,21 +9,16 @@ function Education() {
     {
       id: 1,
       title: "Bachelor Degree",
-      duration: "2020 - Present",
+      duration: "2024 - Present",
       institution: "National University of Bangladesh",
     },
     {
       id: 2,
       title: "Higher Secondary Certificate",
-      duration: "2018 - 2020",
-      institution: "Noakhali Islamia Kamil Madrasah",
+      duration: "2021 - 2022",
+      institution: "padma govt college",
     },
-    {
-      id: 3,
-      title: "Secondary School Certificate",
-      duration: "2008 - 2018",
-      institution: "Baitus Saif Islamia Madrasah",
-    }
+
   ];
 
   return (
@@ -62,7 +57,7 @@ function Education() {
 
         {/* Main Content Grid */}
         <div className="py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+          <div className="grid grid-cols-1 items-center lg:grid-cols-2 gap-8 lg:gap-16">
             {/* Animation Section */}
             <div className="flex justify-center items-start">
               <div className="w-3/4 h-3/4">

@@ -1,14 +1,20 @@
 import { useState, useEffect } from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-javascript";
-import "@/assets/css/tomorrow.css";
-import Meteors from "@/components/ui/meteors";
-// import PortfolioPage from "@/pages/About/About";
-import SparklesText from "@/components/ui/sparkles-text";
-import { FlipWords } from "@/components/ui/flip-words";
+import "../../assets/css/tomorrow.css";
+import Meteors from "../../components/ui/meteors";
+import SparklesText from "../../components/ui/sparkles-text";
+import { FlipWords } from "../../components/ui/flip-words";
+import { Link } from "react-router";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
+import { MdDownload } from "react-icons/md";
+import { RiContactsFill } from "react-icons/ri";
+import { SiLeetcode } from "react-icons/si";
 
 // Grid Background - Replacing the HexagonBackground
 const GridBackground = () => {
+
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
       <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]">
@@ -41,36 +47,34 @@ const GridBackground = () => {
 };
 
 export default function Hero() {
+
+
+    const personalData = {
+  name: "ABU SAID",
+  profile: '/profile.png',
+  designation: "Software Developer",
+  description: "My name is ABU SAID. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.",
+  email: 'abusaid7388@gmail.com',
+  phone: '+8801608797655',
+  address: 'Middle Badda, Dhaka, Bangladesh - 1212 ',
+  github: 'https://github.com/said7388',
+  facebook: 'https://www.facebook.com/abusaid.riyaz/',
+  linkedIn: 'https://www.linkedin.com/in/abu-said-bd/',
+  twitter: 'https://twitter.com/said7388',
+  stackOverflow: 'https://stackoverflow.com/users/16840768/abu-said',
+  leetcode: "https://leetcode.com/said3812/",
+  devUsername: "said7388",
+  resume: "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing"
+}
+
   const words = [
-    "Full-Stack Developer & UI/UX Enthusiast",
-    "JavaScript Developer & Creator of Olova.js",
-    "Learning MARN Stack",
+    "MARN Stack Developer & UI/UX Enthusiast",
+    "JavaScript Developer ",
+    "Learning Next js",
     "Linux & GitHub for DevOps Enthusiast",
   ];
 
-  const [code] = useState(`
-const profile = {
-    name: 'Nazmul Hossain',
-    title: 'Full-Stack Developer | Cloud Enthusiast | Problem Solver',
-    skills: [
-        'React', 'NextJS', 'Redux', 'Express',
-        'MySQL', 'MongoDB', 'Docker', 'AWS', 'TypeScript',
-        'GraphQL', 'Git', 'Linux', 'Discord Development'
-    ],
-    hardWorker: true,
-    quickLearner: true,
-    problemSolver: true,
-    yearsOfExperience: 4, 
-    hireable: function() {
-        return (
-            this.hardWorker &&
-            this.problemSolver &&
-            this.skills.length >= 5 &&
-            this.yearsOfExperience >= 3
-        );
-    }
-};
-  `);
+
 
   useEffect(() => {
     Prism.highlightAll();
@@ -131,7 +135,7 @@ const profile = {
       document.head.removeChild(style);
       window.removeEventListener("resize", checkResolution);
     };
-  }, [code]);
+  }, []);
 
   return (
     <>
@@ -146,9 +150,6 @@ const profile = {
           <GridBackground />
 
           {/* Or keep the original backgrounds if you prefer */}
-          {/* <HexagonBackground />
-          <AnimatedGrid />
-          <DotBackground /> */}
 
           {/* Meteors Effect */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -190,7 +191,7 @@ const profile = {
                     I&apos;m
                     <span className="typing-effect gradient-text">
                       {" "}
-                      Nazmul Hossain
+                      Md. Nobin
                     </span>
                   </span>
                 </h1>
@@ -211,39 +212,64 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  JavaScript lover 🚀 | OlovaJS creator 🔧 | Crafting frameworks
+                  JavaScript lover 🚀 | Crafting frameworks
                   and coding the future 💻✨
                 </p>
               </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
-                {/* View Projects Button */}
-                <a
-                  href="https://github.com/seraprogrammer"
-                  className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
-                >
-                  <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
-                    <span className="relative flex items-center justify-center gap-2 text-white font-medium">
-                      <span>Learn More</span>
-                      <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
-                    </span>
-                  </span>
-                </a>
+              
+          <div className="my-12 flex items-center gap-5">
+            <Link
+              href={personalData.github}
+              target='_blank'
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <BsGithub size={30} />
+            </Link>
+            <Link
+              href={personalData.linkedIn}
+              target='_blank'
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <BsLinkedin size={30} />
+            </Link>
+            <Link
+              href={personalData.facebook}
+              target='_blank'
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <FaFacebook size={30} />
+            </Link>
+            <Link
+              href={personalData.leetcode}
+              target='_blank'
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <SiLeetcode size={30} />
+            </Link>
+            <Link
+              href={personalData.twitter}
+              target='_blank'
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <FaTwitterSquare size={30} />
+            </Link>
+          </div>
 
-                {/* Contact Button */}
-                <a
-                  href="#"
-                  className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
-                >
-                  <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
-                    <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
-                      <span>Get Resume</span>
-                      <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
-                    </span>
-                  </span>
-                </a>
-              </div>
+          <div className="flex items-center gap-3">
+            <Link href="#contact" className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600">
+              <button className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#0d1224] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
+                <span>Contact me</span>
+                <RiContactsFill size={16} />
+              </button>
+            </Link>
+
+            <Link className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold" role="button" target="_blank" href={personalData.resume}
+            >
+              <span>Get Resume</span>
+              <MdDownload size={16} />
+            </Link>
+          </div>
 
               {/* Floating badges */}
               <div className="hidden lg:block absolute left-[5.5rem] top-[2.3rem] animate-float-slow">
