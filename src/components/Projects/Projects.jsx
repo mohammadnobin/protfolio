@@ -64,6 +64,7 @@ const Projects = () => {
       id="projects"
       className="bg-gradient-to-b relative overflow-hidden pt-32 pb-20"
     >
+      {/* Animated gradient background */}
       <div className="absolute inset-0 bg-[#04081A]" />
 
       {/* Grid background */}
