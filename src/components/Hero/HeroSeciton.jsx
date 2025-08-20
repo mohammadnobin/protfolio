@@ -166,7 +166,7 @@ export default function Hero() {
         </div>
 
         {/* Floating badge */}
-        <div className="absolute top-5 right-5 z-20 px-4 py-1.5 rounded-full bg-blue-500/30 backdrop-blur-lg border border-blue-400/40 text-blue-100 text-sm font-semibold shadow-md animate-float">
+        <div className="absolute opacity-50 -z-30 top-5 right-5  px-4 py-1.5 rounded-full bg-blue-500/30 backdrop-blur-lg border border-blue-400/40 text-blue-100 text-sm font-semibold shadow-md animate-float">
           <i className="fas fa-code mr-1"></i> MERN Developer
         </div>
       </div>
@@ -210,7 +210,7 @@ export default function Hero() {
         {/* Description */}
         <div className="mb-10 max-w-xl">
           <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-            JavaScript lover 🚀 | Crafting frameworks and coding the future 💻✨
+            JavaScript lover  | Crafting frameworks and coding the future 
           </p>
         </div>
 
@@ -249,17 +249,17 @@ export default function Hero() {
         </div>
 
         {/* Floating badges */}
-        <div className="hidden lg:block absolute left-[5.5rem] top-[2.3rem] animate-float-slow">
+        <div className="hidden opacity-50 -z-30 lg:block absolute left-[5.5rem] top-[2.3rem] animate-float-slow">
           <div className="px-4 py-2 rounded-lg bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400">
             <i className="fas fa-wand-magic-sparkles"></i>&nbsp;&nbsp;UI Magic
           </div>
         </div>
-        <div className="hidden lg:block absolute right-10 top-20 animate-float">
+        <div className="hidden opacity-50 -z-30 lg:block absolute right-10 top-20 animate-float">
           <div className="px-4 py-2 rounded-lg bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-400">
             <i className="fas fa-code"></i>&nbsp;&nbsp;Clean Code
           </div>
         </div>
-        <div className="hidden lg:block absolute top-[17rem] left-[70%] transform -translate-x-1/2 animate-float">
+        <div className="hidden opacity-50 -z-30 lg:block absolute top-[17rem] left-[70%] transform -translate-x-1/2 animate-float">
           <div className="px-4 py-2 rounded-lg bg-amber-500/10 backdrop-blur-sm border border-amber-500/20 text-amber-400">
             <i className="fas fa-lightbulb"></i>&nbsp;&nbsp;Innovation
           </div>
