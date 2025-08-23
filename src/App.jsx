@@ -12,6 +12,7 @@ import Stairs from './components/ui/Stairs';
 
 const App = () => {
   const [showIntro, setShowIntro] = useState(true);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
