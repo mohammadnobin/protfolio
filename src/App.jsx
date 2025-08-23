@@ -14,7 +14,6 @@ const App = () => {
   const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
-    // 2 সেকেন্ড পরে main content আসবে
     const timer = setTimeout(() => {
       setShowIntro(false);
     }, 1000);
